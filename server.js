@@ -2,6 +2,9 @@
 const port = String(process.env.PORT || '20128');
 const host = '0.0.0.0';
 
+// Set initial admin password for remote cloud access security requirement
+process.env.INITIAL_PASSWORD = process.env.INITIAL_PASSWORD || 'Admin@12345678';
+
 console.log(`[Cloud 9router] Starting 9router service on port ${port}, host ${host}...`);
 
 process.argv = [
